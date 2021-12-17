@@ -7,20 +7,33 @@
 
 import SwiftUI
 
+enum Orientation {
+    case vertexOnTop
+    case edgeOnTop
+}
+
 struct ContentView: View {
     private var center = CGPoint(
         x: UIScreen.main.bounds.width/2,
         y: UIScreen.main.bounds.height/5)
     @State private var edges = 3
     @State private var radius = 100.0
-        
+    
+    @State private var orientation: Orientation = .vertexOnTop
+    
+    private let anim = Animation.spring(response: 1/2, dampingFraction: 0.75, blendDuration: 0)
+    
     let maxEdges: Int = 20
     let maxRadius: CGFloat = UIScreen.main.bounds.width*0.4
     
     private func getPoints() -> [CGPoint] {
         var result = [CGPoint]()
         for i in 0...edges {
-            let a: Double = Double(i)*Double.pi*Double(2)/Double(edges)
+            var a: Double = Double(i)*Double.pi*2.0/Double(edges)
+            if orientation == .edgeOnTop {
+                a += Double.pi/Double(edges)
+            }
+                
             let x: CGFloat = center.x - radius * Foundation.sin(a)
             let y: CGFloat = center.y - radius * Foundation.cos(a)
             
@@ -28,7 +41,7 @@ struct ContentView: View {
         }
         
         for _ in 0..<maxEdges-edges {
-            result.append(CGPoint(x: center.x, y: center.y-radius))
+            result.append(CGPoint(x: result[0].x, y: result[0].y))
         }
         
         return result
@@ -40,10 +53,10 @@ struct ContentView: View {
                 let points = getPoints()
                 ForEach(0..<maxEdges) { edge in
                     Line(start: points[edge], end: points[edge+1])
-                        .stroke(style: StrokeStyle(lineWidth: 4.0, lineCap: .round))
+                        .stroke(style: StrokeStyle(lineWidth: edge < edges ? 4.0 : 0.0, lineCap: .round))
                 }
-                .animation(.spring(response: 1/2, dampingFraction: 1, blendDuration: 1), value: edges)
-                .animation(.easeInOut(duration: 1), value: radius)
+                .animation(anim, value: edges)
+                .animation(.spring(response: 1/2, dampingFraction: 1, blendDuration: 0), value: radius)
             }
             List {
                 Stepper(
@@ -52,6 +65,13 @@ struct ContentView: View {
                     step: 1
                 ) {
                     Text("Edges: \(edges)")
+                }
+                .onChange(of: edges) { _ in
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    
+                    withAnimation(anim) {
+                        orientation = orientation == .vertexOnTop ? .edgeOnTop : .vertexOnTop
+                    }
                 }
                 .padding()
                 VStack {
