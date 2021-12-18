@@ -1,25 +1,24 @@
 //
 //  ContentView.swift
-//  Polygon
+//  MacPolygon
 //
-//  Created by Adin Ackerman on 12/16/21.
+//  Created by Adin Ackerman on 12/17/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     @State private var center = CGPoint(
-        x: UIScreen.main.bounds.width/2,
-        y: UIScreen.main.bounds.height/5)
+        x: 150,
+        y: 200)
     @State private var edges = 3
     @State private var radius = 100.0
     
-    @State private var textField: String = "100"
     @State private var orientation: Orientation = .vertexOnTop
     @State private var showApothem: Bool = true
     
     let maxEdges: Int = 20
-    let maxRadius: CGFloat = UIScreen.main.bounds.width*0.4
+    @State var maxRadius: CGFloat = 1000
     
     private let anim = Animation.spring(response: 1/2, dampingFraction: 1, blendDuration: 0)
     
@@ -45,23 +44,27 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            PolygonView(
-                edges: $edges,
-                radius: $radius,
-                orientation: $orientation,
-                showApothem: $showApothem,
-                maxEdges: maxEdges,
-                maxRadius: maxRadius,
-                anim: anim
-            )
-            PanelView(
-                edges: $edges,
-                radius: $radius,
-                textField: textField,
-                showApothem: $showApothem,
-                anim: anim
-            )
+        HStack {
+            NavigationView {
+                PanelView(
+                    edges: $edges,
+                    radius: $radius,
+                    showApothem: $showApothem,
+                    maxEdges: maxEdges,
+                    maxRadius: maxRadius,
+                    anim: anim
+                )
+                PolygonView(
+                    edges: $edges,
+                    radius: $radius,
+                    orientation: $orientation,
+                    showApothem: $showApothem,
+                    maxEdges: maxEdges,
+                    maxRadius: maxRadius,
+                    anim: anim
+                )
+                    .frame(minWidth: 300)
+            }
         }
     }
 }

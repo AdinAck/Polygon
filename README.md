@@ -1,4 +1,6 @@
-<img src="demo.gif" title="" alt="" data-align="center">
+![](demo.gif)
+
+![](macdemo.png)
 
 # Polygon
 

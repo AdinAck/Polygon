@@ -12,6 +12,17 @@
 		403C4F48276BCBB800D43AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403C4F47276BCBB800D43AED /* Assets.xcassets */; };
 		403C4F4B276BCBB800D43AED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403C4F4A276BCBB800D43AED /* Preview Assets.xcassets */; };
 		403C4F5C276C187A00D43AED /* LineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C4F5B276C187A00D43AED /* LineModel.swift */; };
+		40C21808276D5A6E00201E95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C21807276D5A6E00201E95 /* ContentView.swift */; };
+		40C2180A276D5A6E00201E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C21809276D5A6E00201E95 /* Assets.xcassets */; };
+		40C2180D276D5A6E00201E95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C2180C276D5A6E00201E95 /* Preview Assets.xcassets */; };
+		40C21812276D5B2100201E95 /* LineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C4F5B276C187A00D43AED /* LineModel.swift */; };
+		40C21815276D5E1100201E95 /* PolygonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C21814276D5E1100201E95 /* PolygonView.swift */; };
+		40C21816276D5E1100201E95 /* PolygonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C21814276D5E1100201E95 /* PolygonView.swift */; };
+		40C21818276D607C00201E95 /* OrientationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C21817276D607C00201E95 /* OrientationModel.swift */; };
+		40C21819276D607C00201E95 /* OrientationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C21817276D607C00201E95 /* OrientationModel.swift */; };
+		40C2181B276D60E500201E95 /* PanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2181A276D60E500201E95 /* PanelView.swift */; };
+		40C21820276D6CB400201E95 /* PanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2181F276D6CB400201E95 /* PanelView.swift */; };
+		40C21821276D819300201E95 /* PolygonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C4F43276BCBB800D43AED /* PolygonApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +32,26 @@
 		403C4F47276BCBB800D43AED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		403C4F4A276BCBB800D43AED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		403C4F5B276C187A00D43AED /* LineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineModel.swift; sourceTree = "<group>"; };
+		40C21803276D5A6E00201E95 /* MacPolygon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacPolygon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C21807276D5A6E00201E95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40C21809276D5A6E00201E95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40C2180C276D5A6E00201E95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40C2180E276D5A6E00201E95 /* MacPolygon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacPolygon.entitlements; sourceTree = "<group>"; };
+		40C21814276D5E1100201E95 /* PolygonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonView.swift; sourceTree = "<group>"; };
+		40C21817276D607C00201E95 /* OrientationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationModel.swift; sourceTree = "<group>"; };
+		40C2181A276D60E500201E95 /* PanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelView.swift; sourceTree = "<group>"; };
+		40C2181F276D6CB400201E95 /* PanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		403C4F3D276BCBB800D43AED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C21800276D5A6E00201E95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,7 +64,10 @@
 		403C4F37276BCBB800D43AED = {
 			isa = PBXGroup;
 			children = (
+				40C2181E276D65DA00201E95 /* Views */,
+				40C2181D276D65C900201E95 /* Models */,
 				403C4F42276BCBB800D43AED /* Polygon */,
+				40C21804276D5A6E00201E95 /* MacPolygon */,
 				403C4F41276BCBB800D43AED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				403C4F40276BCBB800D43AED /* Polygon.app */,
+				40C21803276D5A6E00201E95 /* MacPolygon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,7 +86,6 @@
 			children = (
 				403C4F43276BCBB800D43AED /* PolygonApp.swift */,
 				403C4F45276BCBB800D43AED /* ContentView.swift */,
-				403C4F5B276C187A00D43AED /* LineModel.swift */,
 				403C4F47276BCBB800D43AED /* Assets.xcassets */,
 				403C4F49276BCBB800D43AED /* Preview Content */,
 			);
@@ -68,6 +98,44 @@
 				403C4F4A276BCBB800D43AED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40C21804276D5A6E00201E95 /* MacPolygon */ = {
+			isa = PBXGroup;
+			children = (
+				40C21807276D5A6E00201E95 /* ContentView.swift */,
+				40C2181F276D6CB400201E95 /* PanelView.swift */,
+				40C21809276D5A6E00201E95 /* Assets.xcassets */,
+				40C2180E276D5A6E00201E95 /* MacPolygon.entitlements */,
+				40C2180B276D5A6E00201E95 /* Preview Content */,
+			);
+			path = MacPolygon;
+			sourceTree = "<group>";
+		};
+		40C2180B276D5A6E00201E95 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				40C2180C276D5A6E00201E95 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40C2181D276D65C900201E95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40C21817276D607C00201E95 /* OrientationModel.swift */,
+				403C4F5B276C187A00D43AED /* LineModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40C2181E276D65DA00201E95 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40C21814276D5E1100201E95 /* PolygonView.swift */,
+				40C2181A276D60E500201E95 /* PanelView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +158,23 @@
 			productReference = 403C4F40276BCBB800D43AED /* Polygon.app */;
 			productType = "com.apple.product-type.application";
 		};
+		40C21802276D5A6E00201E95 /* MacPolygon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40C21811276D5A6E00201E95 /* Build configuration list for PBXNativeTarget "MacPolygon" */;
+			buildPhases = (
+				40C217FF276D5A6E00201E95 /* Sources */,
+				40C21800276D5A6E00201E95 /* Frameworks */,
+				40C21801276D5A6E00201E95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacPolygon;
+			productName = MacPolygon;
+			productReference = 40C21803276D5A6E00201E95 /* MacPolygon.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +186,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					403C4F3F276BCBB800D43AED = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					40C21802276D5A6E00201E95 = {
 						CreatedOnToolsVersion = 13.2;
 					};
 				};
@@ -119,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				403C4F3F276BCBB800D43AED /* Polygon */,
+				40C21802276D5A6E00201E95 /* MacPolygon */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +222,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		40C21801276D5A6E00201E95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C2180D276D5A6E00201E95 /* Preview Assets.xcassets in Resources */,
+				40C2180A276D5A6E00201E95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,9 +238,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C21818276D607C00201E95 /* OrientationModel.swift in Sources */,
 				403C4F46276BCBB800D43AED /* ContentView.swift in Sources */,
+				40C2181B276D60E500201E95 /* PanelView.swift in Sources */,
 				403C4F44276BCBB800D43AED /* PolygonApp.swift in Sources */,
 				403C4F5C276C187A00D43AED /* LineModel.swift in Sources */,
+				40C21815276D5E1100201E95 /* PolygonView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C217FF276D5A6E00201E95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C21821276D819300201E95 /* PolygonApp.swift in Sources */,
+				40C21820276D6CB400201E95 /* PanelView.swift in Sources */,
+				40C21819276D607C00201E95 /* OrientationModel.swift in Sources */,
+				40C21808276D5A6E00201E95 /* ContentView.swift in Sources */,
+				40C21812276D5B2100201E95 /* LineModel.swift in Sources */,
+				40C21816276D5E1100201E95 /* PolygonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +439,64 @@
 			};
 			name = Release;
 		};
+		40C2180F276D5A6E00201E95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacPolygon/MacPolygon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacPolygon/Preview Content\"";
+				DEVELOPMENT_TEAM = 84WPVNZ8GM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AdinAck.MacPolygon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		40C21810276D5A6E00201E95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacPolygon/MacPolygon.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacPolygon/Preview Content\"";
+				DEVELOPMENT_TEAM = 84WPVNZ8GM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AdinAck.MacPolygon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -342,6 +514,15 @@
 			buildConfigurations = (
 				403C4F4F276BCBB800D43AED /* Debug */,
 				403C4F50276BCBB800D43AED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40C21811276D5A6E00201E95 /* Build configuration list for PBXNativeTarget "MacPolygon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C2180F276D5A6E00201E95 /* Debug */,
+				40C21810276D5A6E00201E95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
