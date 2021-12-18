@@ -50,7 +50,7 @@ struct PolygonView: View {
                     .stroke(.gray, style: StrokeStyle(lineWidth: showApothem ? 4.0 : 0.0, lineCap: .round, dash: [10]))
                 ForEach(0..<maxEdges) { edge in
                     Line(start: points[edge], end: points[edge+1])
-                        .stroke(style: StrokeStyle(lineWidth: edge < edges ? 4.0 : 0.0, lineCap: .round))
+                        .stroke(style: StrokeStyle(lineWidth: 4.0, lineCap: .round))
                 }
             }
             .animation(anim, value: edges)
